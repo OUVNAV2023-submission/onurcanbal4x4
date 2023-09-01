@@ -1,0 +1,49 @@
+Operators1)
+i value is:2
+j value is:1
+
+Operators2)
+b
+
+References and Pointers1)
+10 10
+
+References and Pointers2)
+1764
+
+References and Pointers3)
+0
+
+References and Pointers4)
+0
+
+Numbers1)
+They have different ranges. All store integers, but consume different memory and have different ranges.The minimum size for char is 8 bits, the minimum size for short and int is 16 bits, for long it is 32 bits and long long must contain at least 64 bits.
+
+Numbers2)
+3
+The key difference between a float and double in Java is that a double can represent much larger numbers than a float. Both data types represent numbers with decimals, but a float is 32 bits in size while a double is 64 bits.
+
+Numbers3)
+�
+
+An unsigned number contains just zero or positive values, whereas a signed number has both positive and negative numbers along with the value zero.
+
+Numbers4)
+
+0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
