@@ -1,0 +1,4 @@
+Number of lines in the file: 19567
+
+Number of words in the said file: 97676
+
