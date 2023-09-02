@@ -2,7 +2,34 @@
 // TODO: add any include you might require
 
 RandomVector::RandomVector(int size, double max_val) { 
-  // TODO: Write your code here
+#include <cstdlib>
+#include <ctime>
+#include <iostream>
+#include <vector>
+#include <iterator>
+using namespace std; 
+double doubleRand() {
+  return double(rand()) / (double(RAND_MAX) + max_val);
+}
+int main() {
+  srand(static_cast<unsigned int>(clock()));
+  vector<double> vect;
+  for (int i=0; i < size; i++) {
+    double randomvalue = doubleRand();
+    cout << randomvalue << "\n";
+    vect.push_back(randomvalue);
+  }
+  cout << "Vector begins"<< "\n";
+    copy(vect.begin(),
+         vect.end(),
+         ostream_iterator<double>(cout, " "));
+  return 0;
+}
+
+
+
+
+  
 }
 
 void RandomVector::print(){
