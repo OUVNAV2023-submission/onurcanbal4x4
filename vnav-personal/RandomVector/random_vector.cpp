@@ -7,6 +7,8 @@ RandomVector::RandomVector(int size, double max_val) {
 #include <iostream>
 #include <vector>
 #include <iterator>
+#include <numeric>
+#include <bits/stdc++.h>
 using namespace std; 
 double doubleRand() {
   return double(rand()) / (double(RAND_MAX) + max_val);
@@ -19,33 +21,38 @@ int main() {
     cout << randomvalue << "\n";
     vect.push_back(randomvalue);
   }
-  cout << "Vector begins"<< "\n";
+}
+
+}
+
+void RandomVector::print(){
     copy(vect.begin(),
          vect.end(),
          ostream_iterator<double>(cout, " "));
   return 0;
 }
 
-
-
-
-  
-}
-
-void RandomVector::print(){
-  // TODO: Write your code here
-}
-
 double RandomVector::mean(){
-  // TODO: Write your code here
+  double sum_of_elems = 0.0 ;
+  sum_of_elems = std::accumulate(vect.begin(), vect.end(), 0.0);
+  double mean = 0.0;
+  mean = sum_of_elems/vect.size();
+  cout << "Mean is  " << mean << "\n";
+  return mean;
 }
 
 double RandomVector::max(){
-  // TODO: Write your code here
+ double max = 0.0;
+  max = *max_element(vect.begin(), vect.end());
+    cout <<  "\n" << "Maximum value is " << max << "\n";
+  return max;
 }
 
 double RandomVector::min(){
-  //TODO:  Write your code here
+  double min = 0.0;
+  min = *min_element(vect.begin(), vect.end());
+    cout <<  "\n" << "Minimum value is " << min << "\n";
+  return min;
 }
 
 void RandomVector::printHistogram(int bins){
